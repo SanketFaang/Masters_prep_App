@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <item
+        android:id="@+id/testSeriesFragment"
+        android:title="Test Series"
+        android:icon="@drawable/icon"/>
+    <item
+        android:id="@+id/profileFragment"
+        android:title="Profile"
+        android:icon="@drawable/profile_icon"/>
+    <item
+        android:id="@+id/Chatbotfragment"
+        android:title="Chatbot"
+        android:icon="@drawable/noun_chatbot_1596689"/>
+    <item
+        android:id="@+id/settingsFragment"
+        android:title="Setting"
+        android:icon="@drawable/frame_4"/>
+
+
+</menu>

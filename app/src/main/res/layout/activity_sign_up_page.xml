@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:gravity="center"
+    android:background="#FFFFFF">
+
+    <!-- Back Button -->
+    <ImageView
+        android:id="@+id/back_button"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_gravity="start"
+        android:src="@drawable/back_button"/>
+
+    <!-- Illustration -->
+    <ImageView
+        android:id="@+id/signup_illustration"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/kidstanding"/>
+
+    <!-- Title Text -->
+    <TextView
+        android:id="@+id/signup_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Sign up"
+        android:textSize="24sp"
+        android:textFontWeight="750"
+        android:textStyle="bold"
+        android:textColor="#3C3A36"
+        android:fontFamily="@font/rubik"
+        android:layout_gravity="center"/>
+
+    <!-- Subtitle Text -->
+    <TextView
+        android:id="@+id/signup_subtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Create your account"
+        android:textSize="14sp"
+        android:textFontWeight="650"
+        android:textColor="#78746D"
+        android:fontFamily="@font/rubik"
+        android:layout_gravity="center"/>
+
+    <!-- Name Input Field -->
+    <EditText
+        android:id="@+id/name_input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="16dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/input_background"
+        android:fontFamily="@font/rubik"
+        android:hint="Name"
+        android:textFontWeight="650"
+        android:padding="16dp"
+        android:textColor="#78746D"
+        android:textSize="14sp" />
+
+    <!-- Email/Mobile Input Field -->
+    <EditText
+        android:id="@+id/email_mobile_input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textFontWeight="650"
+        android:background="@drawable/input_background"
+        android:fontFamily="@font/rubik"
+        android:hint="E-mail/Mobile no."
+        android:padding="16dp"
+        android:textColor="#78746D"
+        android:textSize="14sp" />
+
+    <!-- Password Input Field -->
+    <EditText
+        android:id="@+id/password_input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="16dp"
+        android:background="@drawable/input_background"
+        android:fontFamily="@font/rubik"
+        android:hint="Set Password"
+        android:textFontWeight="650"
+        android:inputType="textPassword"
+        android:padding="16dp"
+        android:textColor="#78746D"
+        android:textSize="14sp" />
+
+    <!-- Sign Up Button -->
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/signup_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_background"
+        android:fontFamily="@font/rubik"
+        android:paddingTop="16dp"
+        android:paddingBottom="16dp"
+        android:text="Sign up"
+        android:textFontWeight="750"
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp" />
+
+    <!-- Log in Text -->
+    <TextView
+        android:id="@+id/login_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Log in"
+        android:textSize="14sp"
+        android:textFontWeight="750"
+        android:textColor="#78746D"
+        android:fontFamily="@font/rubik"
+        android:layout_gravity="center"/>
+</LinearLayout>

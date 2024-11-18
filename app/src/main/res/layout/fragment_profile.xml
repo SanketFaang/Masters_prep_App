@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:background="#FFFFFF">
+
+    <!-- Back Button -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center">
+
+    <ImageView
+        android:id="@+id/back_button"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:src="@drawable/back_button"/>
+
+    <!-- Profile Title -->
+    <TextView
+        android:id="@+id/profile_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:paddingRight="25dp"
+        android:fontFamily="@font/rubik"
+        android:text="Profile"
+        android:textColor="#3C3A36"
+        android:layout_weight="1"
+        android:textFontWeight="750"
+        android:textSize="24sp" />
+    </LinearLayout>
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_width="172dp"
+        android:layout_height="172dp"
+        android:src="@drawable/coolkidsitting"
+        app:civ_border_color="#65AAEA"
+        app:civ_border_width="4dp"
+        android:layout_marginTop="20dp"
+        android:padding="16dp"
+        android:layout_gravity="center"/>
+
+    <!-- "Your Test Series" Button -->
+    <TextView
+        android:id="@+id/AccountINfo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/input_background"
+        android:fontFamily="@font/rubik"
+        android:gravity="center"
+        android:padding="16dp"
+        android:text="Account Information"
+        android:textColor="#3C3A36"
+        android:textFontWeight="750"
+        android:textSize="24sp" />
+
+    <TextView
+        android:id="@+id/your_test_series"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/input_background"
+        android:fontFamily="@font/rubik"
+        android:gravity="center"
+        android:padding="16dp"
+        android:text="Your Test Series"
+        android:textColor="#3C3A36"
+        android:textFontWeight="750"
+        android:textSize="24sp" />
+
+    <!-- "Performance Analytics" Button -->
+    <TextView
+        android:id="@+id/performance_analytics"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/input_background"
+        android:fontFamily="@font/rubik"
+        android:gravity="center"
+        android:padding="16dp"
+        android:text="Performance Analytics"
+        android:textColor="#3C3A36"
+        android:textFontWeight="750"
+        android:textSize="24sp" />
+
+    <!-- Logout Text -->
+    <TextView
+        android:id="@+id/logout_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:text="Log out"
+        android:textFontWeight="750"
+        android:textColor="#8A8A8A"
+        android:textSize="14sp"
+        android:fontFamily="@font/rubik"
+        android:layout_gravity="center"/>
+</LinearLayout>

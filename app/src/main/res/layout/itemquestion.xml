@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="2dp">
+
+    <TextView
+        android:id="@+id/questionTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/rubik"
+        android:paddingBottom="8dp"
+        android:textFontWeight="650"
+        android:text="Choose the correct Option"
+        android:textSize="24sp" />
+
+    <ImageView
+        android:id="@+id/questionImageView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp" />
+
+    <RadioGroup
+        android:id="@+id/optionsRadioGroup"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+    </RadioGroup>
+</LinearLayout>

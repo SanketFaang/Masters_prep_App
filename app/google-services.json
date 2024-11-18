@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "840974207591",
+    "project_id": "testsxperts-app",
+    "storage_bucket": "testsxperts-app.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:840974207591:android:524cd1ffe036297d19a2c2",
+        "android_client_info": {
+          "package_name": "com.jhainusa.testsxperts"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDBSgHIcnDEs6pvf7T3Ss3gCycHtkGBluc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linearLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:paddingStart="20dp"
+    android:paddingEnd="20dp">
+
+    <!-- Skip Button at the top right -->
+    <TextView
+        android:id="@+id/skip_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:fontFamily="@font/rubik"
+        android:text="Skip"
+        android:textColor="#78746D"
+        android:textSize="14sp"
+        android:textFontWeight="5000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Image in the center -->
+
+    <!-- Title Text -->
+    <ImageView
+        android:id="@+id/intro_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:contentDescription="Illustration"
+        android:src="@drawable/coolkids"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/skip_button" />
+
+    <TextView
+        android:id="@+id/title_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:fontFamily="@font/rubik"
+        android:text="Test Yourself"
+        android:textColor="#3C3A36"
+        android:textFontWeight="4000"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/subtitle_text"
+        app:layout_constraintEnd_toEndOf="@+id/subtitle_text"
+        app:layout_constraintStart_toStartOf="@+id/subtitle_text" />
+
+    <!-- Subtitle Text -->
+
+    <!-- Start Button -->
+    <TextView
+        android:id="@+id/subtitle_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="108dp"
+        android:fontFamily="@font/rubik"
+        android:gravity="center"
+        android:text="Don’t know how your preparation is going on.\nWe are here to provide you test series to know about\nyour preparation.\n\nGood Luck !"
+        android:textColor="#8A8A8A"
+        android:textFontWeight="4000"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/intro_image" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/start_button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="68dp"
+        android:background="@drawable/button_background"
+        android:fontFamily="@font/rubik"
+        android:paddingLeft="32dp"
+        android:paddingTop="16dp"
+        android:paddingRight="32dp"
+        android:paddingBottom="16dp"
+        android:text="Let's Start"
+        android:textFontWeight="5000"
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/subtitle_text"
+        app:layout_constraintTop_toBottomOf="@+id/subtitle_text" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/profileFragment">
+
+    <!-- Example fragment for Home -->
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.jhainusa.testsxperts.uii.Profile"
+        android:label="Home"
+        tools:layout="@layout/fragment_profile" />
+
+    <!-- Example fragment for Profile -->
+    <fragment
+        android:id="@+id/Chatbotfragment"
+        android:name="com.jhainusa.testsxperts.uii.Chatbot"
+        android:label="Profile"
+        tools:layout="@layout/fragment_chatbot" />
+
+    <!-- Example fragment for Settings -->
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.jhainusa.testsxperts.uii.Setting"
+        android:label="Settings"
+        tools:layout="@layout/fragment_setting" />
+    <fragment
+        android:id="@+id/testSeriesFragment"
+        android:name="com.jhainusa.testsxperts.uii.Setting"
+        android:label="TestSeries"
+        tools:layout="@layout/fragment_test_series" />
+
+    <!-- Add other fragments here as needed -->
+
+</navigation>

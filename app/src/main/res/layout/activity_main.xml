@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/fragmentContainerView4"
+        android:name="androidx.navigation.fragment.NavHostFragment"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        app:defaultNavHost="true"
+        app:layout_constraintBottom_toTopOf="@+id/bottom_bar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:navGraph="@navigation/navigation" />
+
+    <nl.joery.animatedbottombar.AnimatedBottomBar
+        android:id="@+id/bottom_bar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="#FFF"
+        app:abb_indicatorAppearance="round"
+        app:abb_indicatorHeight="4dp"
+        app:abb_badgeTextColor="#BEBAB3"
+        app:abb_indicatorMargin="16dp"
+        app:abb_selectedIndex="1"
+        app:abb_indicatorColor="#E3562A"
+        app:abb_iconSize="40dp"
+        app:abb_selectedTabType="text"
+        app:abb_tabs="@menu/tabs"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

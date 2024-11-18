@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- State when the tab is selected -->
+    <item android:state_selected="true">
+        <shape android:shape="rectangle">
+            <solid android:color="#F8F2EE" /> <!-- Active tab color -->
+            <corners android:radius="16dp" />
+        </shape>
+    </item>
+    <!-- Default state when the tab is not selected -->
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="#E0E0E0" /> <!-- Inactive tab color -->
+            <corners android:radius="16dp" />
+        </shape>
+    </item>
+</selector>

@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="24dp">
+
+    <!-- Top Illustration -->
+    <ImageView
+        android:id="@+id/login_illustration"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:src="@drawable/coolkidsitting" />
+
+    <!-- Title Text -->
+    <TextView
+        android:id="@+id/login_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="8dp"
+        android:fontFamily="@font/rubik"
+        android:text="Log in"
+        android:textColor="#3C3A36"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <!-- Subtitle Text -->
+    <TextView
+        android:id="@+id/login_subtitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:textFontWeight="650"
+        android:fontFamily="@font/rubik"
+        android:text="Login to your account"
+        android:textColor="#78746D"
+        android:textSize="16sp" />
+
+    <!-- Email/Mobile Input Field -->
+    <EditText
+        android:id="@+id/email_mobile_input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/input_background"
+        android:fontFamily="@font/rubik"
+        android:hint="Email/Mobile no."
+        android:padding="16dp"
+        android:textColor="#78746D"
+        android:textFontWeight="650"
+        android:textSize="16sp" />
+
+    <!-- Password Input Field -->
+    <EditText
+        android:id="@+id/password_input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/input_background"
+        android:fontFamily="@font/rubik"
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:padding="16dp"
+        android:textColor="#78746D"
+        android:textFontWeight="650"
+        android:textSize="16sp" />
+
+    <!-- Forgot Password Text -->
+    <TextView
+        android:id="@+id/forgot_password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="10dp"
+        android:fontFamily="@font/rubik"
+        android:lineHeight="16dp"
+        android:text="Forgot Password?"
+        android:textColor="#6879BD"
+        android:textFontWeight="650"
+        android:textSize="14sp" />
+
+    <!-- Login Button -->
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/login_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="10dp"
+        android:background="@drawable/button_background"
+        android:fontFamily="@font/rubik_medium"
+        android:paddingTop="16dp"
+        android:paddingBottom="16dp"
+        android:text="Log in"
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF"
+        android:textFontWeight="500"
+        android:textSize="16sp" />
+
+    <!-- Sign up Text -->
+    <TextView
+        android:id="@+id/signup_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="10dp"
+        android:fontFamily="@font/rubik"
+        android:lineHeight="16dp"
+        android:text="Sign up"
+        android:textColor="#78746D"
+        android:textFontWeight="750"
+        android:textSize="14sp" />
+</LinearLayout>
