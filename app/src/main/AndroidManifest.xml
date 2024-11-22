@@ -15,6 +15,12 @@
         android:theme="@style/Theme.TestsXperts"
         tools:targetApi="31">
         <activity
+            android:name=".Levelwise"
+            android:exported="false" />
+        <activity
+            android:name=".exam_layout"
+            android:exported="false" />
+        <activity
             android:name=".uii.Results_Activity"
             android:exported="false" />
         <activity
@@ -25,7 +31,8 @@
             android:exported="false" />
         <activity
             android:name=".SignUp_Page"
-            android:exported="false" />
+            android:exported="false"
+            android:windowSoftInputMode="adjustPan" />
         <activity
             android:name=".Login_page"
             android:exported="false" />
@@ -34,7 +41,8 @@
             android:exported="false" />
         <activity
             android:name=".MainActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:windowSoftInputMode="adjustPan" />
         <activity
             android:name=".Splash_Screen"
             android:exported="true">

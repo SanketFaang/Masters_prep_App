@@ -11,53 +11,54 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
+import com.jhainusa.testsxperts.databinding.ActivityCourseTestBinding
+import com.jhainusa.testsxperts.databinding.ActivitySignUpPageBinding
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.Dispatchers.Default
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.tasks.await
 
 class SignUp_Page : AppCompatActivity() {
     private  lateinit var auth:FirebaseAuth
-    val db = FirebaseFirestore.getInstance()
+    private lateinit var binding: ActivitySignUpPageBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-        setContentView(R.layout.activity_sign_up_page)
+        binding=ActivitySignUpPageBinding.inflate(layoutInflater)
+        setContentView(binding.root)
         auth=FirebaseAuth.getInstance()
-        val signupButton = findViewById<AppCompatButton>(R.id.signup_button)
-        signupButton.setOnClickListener {
-            val name = findViewById<EditText>(R.id.name_input).text.toString()
-            val email = findViewById<EditText>(R.id.email_mobile_input).text.toString()
-            val pass = findViewById<EditText>(R.id.password_input).text.toString()
-            println(email)
+        binding.signupButton.setOnClickListener {
+            val name = binding.nameInput.text.toString()
+            val email = binding.emailMobileInput.text.toString()
+            val pass = binding.passwordInput.text.toString()
             if(name.isEmpty() || email.isEmpty()|| pass.isEmpty()){
                 Toast.makeText(this@SignUp_Page,"Please Fill all the details",Toast.LENGTH_SHORT).show()
             }
             else{
-                auth.createUserWithEmailAndPassword(email,pass)
-                    .addOnCompleteListener{
-                        if(it.isSuccessful){
-                            UploadtoFirebase(name,email,pass)
-                            startActivity(Intent(this,Login_page::class.java))
-                        }
-                        else{
-                            Toast.makeText(this,"Registration Failed : ${it.exception?.message}",Toast.LENGTH_SHORT).show()
-                        }
+                CoroutineScope(Dispatchers.IO).launch {
+                    val editor = getSharedPreferences("USER_DETAILS", MODE_PRIVATE).edit()
+                    editor.putString("name",name)
+                    editor.putString("email",email)
+                    editor.putString("pass",pass)
+                    editor.apply()
+                }
+                CoroutineScope(Dispatchers.Main).launch {
+                    try {
+                        auth.createUserWithEmailAndPassword(email, pass).await()
+                        Toast.makeText(this@SignUp_Page,"Registration Successful",Toast.LENGTH_SHORT).show()
+                        startActivity(Intent(this@SignUp_Page,MainActivity::class.java))
+                        finish()
+                    }
+                    catch (e:Exception){
+                       Toast.makeText(this@SignUp_Page,"Registration failed : ${e.message}",Toast.LENGTH_SHORT).show()
+                    }
                     }
             }
         }
+        binding.loginText.setOnClickListener{
+            startActivity(Intent(this,Login_page::class.java))
+        }
 
-    }
-    private fun UploadtoFirebase(name : String,email : String,pass:String){
-        val userId = FirebaseAuth.getInstance().currentUser?.uid
-        val userProfile = hashMapOf(
-            "name" to name,
-            "email" to email,
-            "pass" to pass
-        )
-        db.collection("Users").document(userId!!)
-            .set(userProfile)
-            .addOnSuccessListener {
-                Toast.makeText(this,"Registration Successfull",Toast.LENGTH_SHORT).show()
-            }
-            .addOnFailureListener { e->
-                Toast.makeText(this,e.message,Toast.LENGTH_SHORT).show()
-            }
     }
 }

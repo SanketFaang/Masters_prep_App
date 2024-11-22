@@ -1,20 +1,258 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".uii.Results_Activity">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:id="@+id/main"
+    android:padding="25dp"
+    android:background="#F5F5F5">
 
+    <!-- Header -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingBottom="8dp">
+
+        <!-- Back Button -->
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/back_button"
+            android:contentDescription="Back"
+            android:padding="8dp" />
+
+        <!-- Title -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="Result and Analysis"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#333333" />
+    </LinearLayout>
+
+    <!-- Section Header -->
     <TextView
-        android:id="@+id/testResult"
-        android:layout_width="136dp"
-        android:layout_height="180dp"
-        android:text="TextView"
-        android:textSize="30dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:padding="12dp"
+        android:background="@drawable/input_background"
+        android:text="Result and Summary"
+        android:textSize="22sp"
+        android:textFontWeight="650"
+        android:textColor="#000000"
+        android:fontFamily="@font/rubik"
+        android:gravity="center" />
+
+    <!-- Stats Container -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/input_background"
+        android:backgroundTint="#BCDBF0"
+        android:divider="@android:color/darker_gray"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:showDividers="middle">
+
+        <!-- Total Questions -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="33dp"
+            android:background="@drawable/input_background"
+            android:backgroundTint="#DEEDF8"
+            android:orientation="horizontal"
+            android:padding="10dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/rubik"
+                android:text="Total Questions"
+                android:textColor="#23628C"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/tquestion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/rubik"
+                android:text="100"
+                android:textColor="#007AFF"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <!-- Answered -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="33dp"
+            android:background="@drawable/input_background"
+            android:backgroundTint="#DEEDF8"
+            android:orientation="horizontal"
+            android:padding="10dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawableStart="@drawable/ellipse9"
+                android:drawablePadding="8dp"
+                android:fontFamily="@font/rubik"
+                android:text="Answered"
+                android:textColor="#23628C"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/tans"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/rubik"
+                android:text="58"
+                android:textColor="#007AFF"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <!-- Not Answered -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="33dp"
+            android:background="@drawable/input_background"
+            android:backgroundTint="#DEEDF8"
+            android:orientation="horizontal"
+            android:padding="10dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawableStart="@drawable/ellipse8"
+                android:drawablePadding="8dp"
+                android:fontFamily="@font/rubik"
+                android:text="Not Answered"
+                android:textColor="#23628C"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/tnq"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/rubik"
+                android:text="42"
+                android:textColor="#007AFF"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <!-- Not Visited -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="33dp"
+            android:background="@drawable/input_background"
+            android:backgroundTint="#DEEDF8"
+            android:orientation="horizontal"
+            android:padding="10dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawableStart="@drawable/ellipse11"
+                android:drawablePadding="8dp"
+                android:fontFamily="@font/rubik"
+                android:text="Not Visited"
+                android:textColor="#23628C"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/tnv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/rubik"
+                android:text="1"
+                android:textColor="#007AFF"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <!-- Correct -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="33dp"
+            android:background="@drawable/input_background"
+            android:backgroundTint="#DEEDF8"
+            android:orientation="horizontal"
+            android:padding="10dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawableStart="@drawable/ellipse12"
+                android:drawablePadding="8dp"
+                android:fontFamily="@font/rubik"
+                android:text="Correct"
+                android:textColor="#23628C"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/tCorrect"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/rubik"
+                android:text="35"
+                android:textColor="#007AFF"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <!-- Incorrect -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="33dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/input_background"
+            android:backgroundTint="#DEEDF8"
+            android:orientation="horizontal"
+            android:padding="10dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawableStart="@drawable/ellpise10"
+                android:drawablePadding="8dp"
+                android:fontFamily="@font/rubik"
+                android:text="Incorrect"
+                android:textColor="#23628C"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/tInc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/rubik"
+                android:text="23"
+                android:textColor="#007AFF"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>

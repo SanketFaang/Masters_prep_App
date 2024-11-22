@@ -24,7 +24,7 @@
         android:layout_marginVertical="46sp"
         android:fontFamily="@font/rubik_medium"
         android:gravity="center"
-        android:text="TestXperts"
+        android:text="MastersPrep"
         android:textColor="#3C3A36"
         android:textFontWeight="650"
         android:textSize="40sp" />

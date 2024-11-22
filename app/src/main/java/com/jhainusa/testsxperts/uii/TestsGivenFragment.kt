@@ -114,8 +114,11 @@ class TestsGivenFragment : Fragment() {
         }
 
         val intent= Intent(requireContext(),Results_Activity::class.java)
-        intent.putExtra("score",score)
-        intent.putExtra("no of Q",questionList.size)
+        intent.putExtra("Answered",score)
+        intent.putExtra("Total_Questions",questionList.size)
+        intent.putExtra("Not_answered",(questionList.size-score))
+        intent.putExtra("correct",score)
+        intent.putExtra("incorrect",(questionList.size-score))
         startActivity(intent)
     }
 }

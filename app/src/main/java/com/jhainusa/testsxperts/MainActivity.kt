@@ -12,7 +12,6 @@ import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
 import com.jhainusa.testsxperts.databinding.ActivityMainBinding
-import com.jhainusa.testsxperts.uii.Chatbot
 import com.jhainusa.testsxperts.uii.Profile
 import com.jhainusa.testsxperts.uii.Setting
 import com.jhainusa.testsxperts.uii.TestSeries
@@ -32,7 +31,7 @@ class MainActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
-
+        val animatedNavigationView = AnimatedBottomBar(this)
         val navbar=binding.bottomBar
         navbar.onTabSelected = { tab ->
             when (tab.id) {

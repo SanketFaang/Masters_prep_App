@@ -52,6 +52,7 @@ dependencies {
     implementation(libs.firebase.database)
     implementation(libs.firebase.firestore)
     implementation(libs.firebase.auth)
+    implementation(libs.firebase.vertexai)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
@@ -63,5 +64,9 @@ dependencies {
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.3")
     implementation ("com.github.bumptech.glide:glide:4.15.1")
     annotationProcessor ("com.github.bumptech.glide:compiler:4.15.1")
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.9.0")
+    implementation ("com.squareup.okhttp3:okhttp:4.10.0")
+
+
 
 }

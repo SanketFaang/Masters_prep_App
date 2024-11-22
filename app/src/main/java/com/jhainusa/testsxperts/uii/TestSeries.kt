@@ -1,6 +1,7 @@
 package com.jhainusa.testsxperts.uii
 
 import MyAdapter
+import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -35,8 +36,6 @@ class TestSeries : Fragment() {
     lateinit var recyclerView: RecyclerView
     private lateinit var Adapter: MyAdapter
     private lateinit var testList: MutableList<testCardView>
-    val userId= FirebaseAuth.getInstance().currentUser?.uid
-    var db= FirebaseFirestore.getInstance()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
     }
@@ -46,13 +45,10 @@ class TestSeries : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         binding = FragmentTestSeriesBinding.inflate(layoutInflater)
-        db.collection("Users").document(userId!!)
-            .get()
-            .addOnSuccessListener{
-                binding.userNameText.text=it.getString("name")
-            }
+        val editor = requireContext().getSharedPreferences("USER_DETAILS",Context.MODE_PRIVATE)
+        binding.userNameText.setText(editor.getString("name",null))
         recyclerView = binding.recyclerView
-        recyclerView.layoutManager = LinearLayoutManager(requireContext())
+        recyclerView.layoutManager = LinearLayoutManager(requireContext(),LinearLayoutManager.HORIZONTAL,false)
         testList = mutableListOf()
         Adapter=MyAdapter(testList)
         recyclerView.adapter=Adapter

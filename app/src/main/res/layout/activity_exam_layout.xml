@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="#E0E0E0"
+    tools:context=".MainActivity">
+
+    <!-- Back to Home -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:padding="8dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/back_button" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="back to home"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:paddingRight="25dp"
+            android:fontFamily="@font/rubik"
+            android:textSize="18sp"
+            android:layout_marginStart="8dp" />
+    </LinearLayout>
+
+    <!-- JEE Mains Card -->
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="4dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="16dp"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_folder" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="JEE MAINS"
+                android:id="@+id/testname"
+                android:fontFamily="@font/rubik"
+                android:textSize="16sp"
+                android:layout_marginStart="8dp" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/group_3" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <!-- Difficulty Level Section -->
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="4dp"
+        android:background="#B3E5FC">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="#BADBF1"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Difficulty Level"
+                android:textColor="#3E81AD"
+                android:fontFamily="@font/rubik"
+                android:textStyle="bold"
+                android:textSize="16sp" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:textAllCaps="false"
+                android:textColor="#23628C"
+                android:paddingHorizontal="30dp"
+                android:id="@+id/easy"
+                android:layout_width="209dp"
+                android:background="@drawable/input_background"
+                android:layout_height="wrap_content"
+                android:text="Easy (10 tests)"
+                android:fontFamily="@font/rubik"
+                android:layout_marginTop="8dp" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:textAllCaps="false"
+                android:textColor="#23628C"
+                android:paddingHorizontal="30dp"
+                android:id="@+id/medium"
+                android:layout_width="209dp"
+                android:background="@drawable/input_background"
+                android:layout_height="wrap_content"
+                android:text="Medium (10 tests)"
+                android:fontFamily="@font/rubik"
+                android:layout_marginTop="8dp" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:textAllCaps="false"
+                android:textColor="#23628C"
+                android:paddingHorizontal="30dp"
+                android:layout_width="209dp"
+                android:id="@+id/hard"
+                android:background="@drawable/input_background"
+                android:layout_height="wrap_content"
+                android:text="Hard (5 tests)"
+                android:fontFamily="@font/rubik"
+                android:layout_marginTop="8dp" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <!-- Recommendations Section -->
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="4dp"
+        android:background="#B3E5FC">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="#BADBF1"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Recommendations"
+                android:fontFamily="@font/rubik"
+                android:textColor="#3E81AD"
+                android:textStyle="bold"
+                android:textSize="16sp" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:textAllCaps="false"
+                android:textColor="#23628C"
+                android:paddingHorizontal="40dp"
+                android:layout_width="209dp"
+                android:id="@+id/chapterwisetbtn"
+                android:layout_height="wrap_content"
+                android:text="Chapterwise Tests"
+                android:background="@drawable/input_background"
+                android:fontFamily="@font/rubik"
+                android:layout_marginTop="8dp" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:textAllCaps="false"
+                android:textColor="#23628C"
+                android:paddingHorizontal="30dp"
+                android:layout_width="209dp"
+                android:id="@+id/pyqbtn"
+                android:background="@drawable/input_background"
+                android:layout_height="wrap_content"
+                android:text="PYQs_2024 (10 tests)"
+                android:fontFamily="@font/rubik"
+                android:layout_marginTop="8dp" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <!-- Explore Other Tests Button -->
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/input_background"
+        android:drawableEnd="@drawable/group_4"
+        android:fontFamily="@font/rubik"
+        android:gravity="center"
+        android:paddingHorizontal="30dp"
+        android:text="Explore Other Tests"
+        android:textAllCaps="false"
+        android:textColor="#23628C" />
+</LinearLayout>

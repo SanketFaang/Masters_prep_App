@@ -2,7 +2,7 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    app:startDestination="@id/profileFragment">
+    app:startDestination="@id/testSeriesFragment">
 
     <!-- Example fragment for Home -->
     <fragment
@@ -26,7 +26,7 @@
         tools:layout="@layout/fragment_setting" />
     <fragment
         android:id="@+id/testSeriesFragment"
-        android:name="com.jhainusa.testsxperts.uii.Setting"
+        android:name="com.jhainusa.testsxperts.uii.TestSeries"
         android:label="TestSeries"
         tools:layout="@layout/fragment_test_series" />
 

@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">TestsXperts</string>
+    <string name="app_name">MastersPrep</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="lorem56e">Eacn Question carry 4 marks.\nFor correct answer you will get +4.\nFor Wrong answetr you will get -1.\nAttemp Questions Wisely</string>
